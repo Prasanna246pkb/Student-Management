@@ -16,7 +16,7 @@ class StudentCreateView(CreateView):
 
 class StudentUpdateView(UpdateView):
     model = Student
-    fields = ['name','email','course','marks','fee']
+    fields = ['name','email','course','marks']
     template_name = 'updatestudent.html'
     success_url = reverse_lazy('list_stud')
 
