@@ -6,13 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <center><h1>STUDENT LIST</h1></center>
+    <table border="2" width="100%">
         <tr>
             <th>Name</th>
             <th>Email</th>
             <th>Course</th>
             <th>Marks</th>
             <th>Fee</th>
+            <th>Update</th>
+            <th>Delete</th>
         </tr>
         {%for stud in students%}
         <tr>
@@ -21,8 +24,11 @@
             <td>{{stud.course}}</td>
             <td>{{stud.marks}}</td>
             <td>{{stud.fee}}</td>
+            <td><center><a href="/updatestudent/{{stud.id}}/">Update</a></center></td>
+            <td><center><a href="/deletestudent/{{stud.id}}/">Delete</a></center></td>
         </tr>
         {%endfor%}
     </table>
+<button><a href="/createstudent/">Add Student</a></button>
 </body>
 </html>
